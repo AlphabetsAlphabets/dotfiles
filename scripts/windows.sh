@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 # rofi -show window for Hyprland, basically
+# source: https://github.com/hyprwm/Hyprland/discussions/830#discussioncomment-3868467
 
 state="$(hyprctl -j clients)"
 active_window="$(hyprctl -j activewindow)"
