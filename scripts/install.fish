@@ -1,0 +1,3 @@
+neovim-bin
+bpython
+tmux

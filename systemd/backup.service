@@ -1,0 +1,13 @@
+[Unit]
+Description=Backup obsidian notes before shutdown
+DefaultDependencies=no
+Requires=network-online.target
+After=network-online.target
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStop=fish /home/star/Documents/dotfiles/scripts/backup.fish
+
+[Install]
+WantedBy=default.target shutdown.target
