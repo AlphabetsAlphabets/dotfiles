@@ -1,4 +1,1 @@
-neovim-bin
-bpython
-tmux
-github-cli
+yay -S neovim-bin bpython tmux github-cli pix
