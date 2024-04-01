@@ -7,7 +7,7 @@ After=network-online.target
 [Service]
 Type=oneshot
 RemainAfterExit=yes
-ExecStop=fish /home/star/Documents/dotfiles/scripts/backup.fish
+ExecStop=fish /home/star/dotfiles/scripts/backup.fish
 
 [Install]
 WantedBy=default.target shutdown.target

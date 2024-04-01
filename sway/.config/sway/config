@@ -26,9 +26,8 @@ bindsym $mod+Return exec $term
 bindsym $mod+q kill
 
 # Rofi
-bindsym $mod+i exec "rofi -show drun"
-bindsym $mod+u exec "rofi -show window"
-bindsym $mod+o exec "rofi -show run"
+bindsym $mod+i exec "wofi --show drun --allow-images"
+bindsym $mod+u exec "~/Documents/dotfiles/scripts/windows.sh"
 bindsym $mod+Shift+s exec "grimblast --cursor copysave area && notify-send Selected\ area saved"
 
 floating_modifier $mod normal
@@ -144,6 +143,11 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+input type:touchpad {
+    tap enabled
+    natural_scroll disabled
+}
+
 #
 # Status Bar:
 #
@@ -153,7 +157,7 @@ bar {
 
     # When the status_command prints a new line to stdout, swaybar updates.
     # The default just shows the current date and time.
-    status_command while date +'%Y-%m-%d %X'; do sleep 1; done
+    status_command while date +'(%A), %Y-%m-%d %T'; do sleep 1; done
 
     colors {
         statusline #ffffff
